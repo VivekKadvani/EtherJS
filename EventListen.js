@@ -4,7 +4,7 @@ require("dotenv").config()
 
 async function main() {
     const usdtAddress = '0xdAC17F958D2ee523a2206206994597C13D831ec7'
-    const provider = new ethers.providers.WebSocketProvider(`https://eth-mainnet.g.alchemy.com/v2/iZGw-1K2jHYZlDu07a-PZ2IJfEoIFJkt`)
+    const provider = new ethers.providers.JsonRPCProvider(`https://eth-mainnet.g.alchemy.com/v2/iZGw-1K2jHYZlDu07a-PZ2IJfEoIFJkt`)
 
     const contract = new ethers.Contract(usdtAddress, ABI, provider);
 
